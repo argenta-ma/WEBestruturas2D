@@ -1,0 +1,50 @@
+/*
+Folha de estilos para os botões sobre o canvas
+*/
+/* 
+    Criado em : 30/12/2015
+    Autor     : markinho
+*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+AreaDesenho {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#topClose {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2px;
+        width: 30px;
+        height: 30px;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+}
+#topClose:hover {
+        color: #FFF;
+        background: #444;
+        cursor: pointer;
+}
+#topClose:active {
+        color: #000;
+        background: #FFF;
+        cursor: pointer;
+}
+
+#quadrado {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        padding: 2px;
+        width: 100px;
+        height: 100px;
+        background: #000;
+        display: box;
+}

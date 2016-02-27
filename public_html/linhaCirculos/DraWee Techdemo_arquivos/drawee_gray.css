@@ -1,0 +1,217 @@
+html {
+    height:   100% 
+}
+
+body {
+  	width:    100%;
+    height:   100%; 
+    margin:   0; 
+    padding:  0; 
+    color:    #555;
+    font-size:  13px;
+    background: lightgray;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+#map-canvas, #map-image { 
+    width:  640px;
+    height: 480px; 
+}
+
+
+h1 {
+	font-size:     28px;
+	font-weight:   bold;
+	font-family:   "Trebuchet MS",Arial, Helvetica, sans-serif;
+	letter-spacing:  1px;
+}
+
+h2{
+	font-family:   "Arial Narrow",Arial,Helvetica,sans-serif;
+	font-size:     10px;
+	font-weight:   normal;
+	letter-spacing:  1px;
+	padding-left:  2px;
+	text-transform:  uppercase;
+	white-space:   nowrap;
+	margin-top:    4px;
+}
+
+#main{
+    width:   800px;
+    margin:  10px auto;
+}
+#main p{
+    padding-bottom:  8px;
+}
+
+.clear{
+    clear:   both;
+}
+
+
+.container{
+  	margin-top:  20px;
+    border:      3px solid darkslategray;
+    padding:     10px;
+
+    box-shadow:   6px 6px 15px slategray;
+
+    -khtml-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius:  10px;
+}
+
+.err{
+    color:  red;
+}
+
+.success{
+    color:  #00CC00;
+}
+
+a, a:visited {
+    text-decoration:  none;
+    outline:          none;
+}
+
+a:hover{
+    text-decoration:  underline;
+}
+
+.tutorial-info{
+    text-align:   center;
+    padding:      10px;
+}
+
+button {
+    color:      green;
+    background: #FFFFFF;
+    border:     1px solid gray;
+    padding:    5px;
+
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+button :hover {
+    border:   2px solid #f0f0f0;
+}
+
+button .selected {
+    color:       #FFFFFF;
+    background:  green;  
+}
+
+.toolbar {
+}
+
+.mode-btn {
+    width:          32px;
+    height:         32px;
+    margin:         0px;
+    padding:        0px;
+    border:         1px solid darkslategray; 
+    border-radius:  3px;
+}
+.mode-btn .selected {
+    background:   slategray;
+}
+.mode-btn .input {
+    border-radius:  15px;
+}
+
+img .size-btn {
+    width:    10px;
+    height:   10px;
+    margin:   0px;
+    padding:  0px;
+    border:   1px solid darkslategray;
+}
+img .size-btn .selected {
+    margin:   0px;
+    padding:  0px;
+    border:   1px solid black;
+}
+div .size-btn {
+    width:    10px;
+    height:   10px;
+    margin:   0px;
+    padding:  0px;
+}
+div .size-btn .selected {
+    margin:   0px;
+    padding:  0px;
+    border:   1px solid black;
+    border-radius: 3px;
+}
+
+.color_btn {
+    border:   1px solid slategray; 
+    border-radius: 3px;
+    
+    width:    12px;
+    height:   12px; 
+    margin:   0px;
+    padding:  0px;
+}
+.color_btn .selected {
+    border:   1px solid red; 
+    width:    12px;
+    height:   12px; 
+}
+div .color_btn .selected {
+    border:   1px solid green; 
+    width:    12px;
+    height:   12px; 
+}
+div .color-btn .selected {
+    border:   1px solid black; 
+    width:    12px;
+    height:   12px; 
+}
+
+
+textarea {
+    border-radius:  5px;
+    opacity:        1.0;
+}
+.txt-hidden {
+    border:         0px; 
+    opacity:        0.01;
+}
+
+
+.txtarea {
+    border-radius:  5px;
+    opacity:        1;
+}
+.txtarea .hid {
+    border:         0px; 
+    opacity:        0.01;
+}
+
+textarea .hid {
+    border:         0px; 
+    opacity:        0.01;
+}
+
+a, a:visited {
+}
+
+.logo  {
+    font-family:    "Arial Narrow",Arial,Helvetica,sans-serif;
+    font-size:      18px;
+    padding-left:   15px;
+    padding-right:  15px;
+    color:          #afa;
+    text-decoration: none;
+    border-right-color: darkgreen;
+    border-right-style: solid;
+    border-right-width: thin;
+}
+
+.hidden {
+    display: none;
+}

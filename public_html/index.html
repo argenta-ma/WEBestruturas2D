@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+Aplicativo WEB para o aprendizado de HTML5 canvas e Scripts java, para o 
+desenvolvimento do aplicativo de solução em tempo real de estruturas 
+bidimensionais (de preferência com semirigidez das ligações).
+
+Situação atual, processo de desenho:
+
+- Ligar/desligar grid e mudar tamanho OK!
+- Construção do menu (em processo)
+- Desenhar linhas com círculos na extremidade (ainda com falhas!)
+- Desenhar apoios  (a fazer)
+- Desenhar cargas (a fazer)
+- DEsenhar outros elementos visuais (a fazer)
+
+Parte 2, resolução:
+
+- a definir...
+
+Criado em : 03/12/2015
+Autor     : markinho
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>WEBestruturas2D</title>
+        
+<!-- Folha de estilos para o canvas, uso com o código para aprender!
+        <link rel="stylesheet" href="css/canvasTeste.css">  
+-->
+        
+        <!-- Folha de estilos para botões sobre o canvas -->
+        <link rel="stylesheet" href="css/estilos.css">
+        
+        <!-- Importando o jQuery -->
+        <script type="text/javascript" 
+                src="js/jquery/jquery.js" 
+                charset="utf-8">
+        </script>
+        
+        <!-- Importando os elementos do jQuery -->
+        <script type="text/javascript" 
+                src="js/jquery/jquery-ui.js" 
+                charset="utf-8">
+        </script>
+        
+        <!-- Importanto o javascript para troca d idioma -->
+        <script type="text/javascript" 
+                src="js/jquery/jquery.i18n.properties.min.js" 
+                charset="utf-8">
+        </script>
+        
+        <!-- Importanto as mensagens em em todos os idiomas do site -->
+        <script type="text/javascript" 
+                src="js/Textos.js" 
+                charset="utf-8">
+        </script>
+        
+        <!-- Incluindo o html que contém o menu superior -->
+        <script> 
+            //$("#includedContent").load("menu.html");
+            $(function(){
+              $("#includedContent").load("menu.html"); 
+            });
+        </script>
+        
+        <!-- botões do jQuery-ui com icones 
+        <script>
+            $(function () {
+                $("#btnNew").button({
+                    icons: { primary: "ui-icon-newwin" }
+                });
+                $("#btnSave").button({
+                    icons: { primary: "ui-icon-disk" },
+                    disabled: true
+                });
+            }); 
+        </script>
+        -->
+        
+<!-- Códigos javascript para facilitar a criação de um grid, usado com
+o código para aprender
+        <script type="text/javascript" 
+                src="js/fabric.js" 
+                charset="utf-8">
+        </script>
+-->
+    </head> 
+    <body>
+        <!-- div para incluir o arquivo html do menu -->
+        <div id="includedContent" style="position: relative; z-index: 2;">
+        </div>
+        
+        <!-- Canvas para desenhar o grid e javascrip do grid -->
+        <canvas id="grid" 
+                style="position: absolute; left: 0; top: 0; z-index: 0;">
+        </canvas>
+        <script type="text/javascript" src="js/grid.js" charset="utf-8">
+        </script>
+        
+        <!-- Canvas para os elementos gráficos (linha, forças, apoios, etc... e
+        javascript para os elementos gráficos-->
+        <canvas id="AreaDesenho" 
+                style="position: absolute; left: 0; top: 0; z-index: 1;">
+        </canvas>
+        <script type="text/javascript" src="js/desenhos.js" charset="utf-8">
+        </script>
+        
+        
+<!--    Código que desenha corretamente as linhas! Para aprender...    
+        <div id="gridOnOff">
+            <input type="radio" id="editOn" name="radio" onClick="editOn()">
+                <label for="editOn">ON</label>
+            <input type="radio" id="editOff" name="radio" 
+                   onClick="editOff()" checked>
+                <label for="editOff">OFF</label>
+        </div>
+         Canvas movendo grid 
+        <canvas id="c" width="600" height="600"></canvas>
+        <script type="text/javascript" src="js/testeGrid.js" charset="utf-8">
+        </script>
+-->
+    </body>
+</html>  

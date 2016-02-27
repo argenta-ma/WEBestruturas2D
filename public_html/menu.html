@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/estiloMenu.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.css" type="text/css">
+    <title>Menus de Opções</title>
+    <script>
+        $(function() {
+            $( "#radioset" ).buttonset();   
+            $( "#gridOnOff" ).buttonset();   
+        });
+        jQuery('#radio1').button({
+            text: false,
+            icons: {
+                primary: "botaoIcone"   // Custom icon
+            }
+        });
+        $("#radioset").buttonset().find('label').width(25);
+        $("#radioset").buttonset().find('label').height(25);
+
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('input[type="radio"]').click(function(){
+                if($(this).attr("id")==="radio1"){
+                    $(".box").not(".quadrada").hide();
+                    $(".quadrada").show();
+                }
+                if($(this).attr("id")==="radio2"){
+                    $(".box").not(".retangular").hide();
+                    $(".retangular").show();
+                }
+                if($(this).attr("id")==="radio3"){
+                    $(".box").not(".circular").hide();
+                    $(".circular").show();
+                }
+                if($(this).attr("id")==="radio4"){
+                    $(".box").not(".aviso").hide();
+                    $(".aviso").show();;                    
+                }
+            });
+        });
+    </script>
+    <script>
+        //buscando as mensagens em javascript e colocando para div
+        $('.msg_complex').html(msg_complex('Marco'));
+        $('.msg_hello').html(msg_hello);
+    </script>
+</head>
+<body>
+
+<div class="menuholder">
+    <ul class="menu">
+        <li><a href=# class="gray">Home</a>
+            <div class="subs">
+                <dl>
+                    <dt>Linhas de Grid</dt>
+                    <dd>
+                        <div id="gridOnOff">
+                            <input type="radio" id="gridOn" name="radio" onClick="gridOn()"><label for="gridOn">ON</label>
+                            <input type="radio" id="gridOff" name="radio" onClick="gridOff()" checked><label for="gridOff">OFF</label>
+                        </div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        Incrementos em X: <input type="text" id="incX" value="" disabled="disabled" onkeypress="return isNumberKey(event)" onchange="atualiza_incX()"/>
+                    </dd>
+                    <dd>
+                        Incrementos em Y: <input type="text" id="incY" value="" disabled="disabled" onkeypress="return isNumberKey(event)" onchange="atualiza_incY()"/>
+                    </dd>
+                </dl>
+            </div>
+        </li>
+        <li><a href=# class="gray">Seções</a>
+            <div class="subs">
+                <dl>
+                    <dt>Tipo da Seção</dt>
+                    <dd>
+                        <form>
+                            <div id="radioset">
+                                <input type="radio" id="radio1" name="radio"><label for="radio1"><img src="imagens/point1_16.png"/></label><br>
+                                <input type="radio" id="radio2" name="radio"><label for="radio2">Ret.</label><br>
+                                <input type="radio" id="radio3" name="radio"><label for="radio3">Circ.</label><br>
+                                <input type="radio" id="radio4" name="radio" checked><label for="radio4">Nenhuma</label>
+                            </div>
+                        </form>
+                    </dd>
+                    <dd>
+                        adfsg
+                    </dd>
+                    <dd>adfsd</dd>
+                </dl>
+                <dl>
+                    <dt>Propriedades</dt>
+                    <dd>
+                        <div class="quadrada box">Altura:</div>
+                        <div class="retangular box">Raio:</div>
+                        <div class="circular box">Pontos:</div>
+                        <div class="limpo box"></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>Teste Input</dt>
+                    <dd>
+                        <input type="text" >
+                        
+                    </dd>
+                    <dd><a href="#">JS / jQuery</a></dd>
+                    <dd><a href="#">PHP</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li><a href="http://www.script-tutorials.com/category/resources/" class="gray">Resources</a>
+            <div class="subs">
+                <dl>
+                    <dt>Links #5</dt>
+                    <dd>
+                        <div class="msg_complex"></div>
+                        <div class="msg_hello"></div>
+                    </dd>
+                    <dd><a href="http://www.script-tutorials.com/category/mysql/">MySQL</a></dd>
+                </dl>
+                <dl>
+                    <dt>Links #6</dt>
+                    <dd><ul id="icons" class="ui-widget ui-helper-clearfix">
+                            <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-n">
+                                <span class="ui-icon ui-icon-carat-1-n"></span>
+                            </li>
+                        </ul>
+                    </dd>
+                    <dd><a href="http://www.script-tutorials.com/category/ajax/">Ajax</a></dd>
+                </dl>
+                <dl>
+                    <dt>Links #7</dt>
+                    <dd>
+                        <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" role="button" aria-disabled="false" title="Delete" href="/echo/json/">
+                            <span class="ui-button-icon-primary ui-icon ui-icon-trash ui-icon-red"></span>
+                            <span class="ui-button-text">Delete</span>
+                        </button>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>Links #8</dt>
+                    <dd><a href="http://www.script-tutorials.com/category/mysql/">MySQL</a></dd>
+                    <dd><a href="http://www.script-tutorials.com/category/ajax/">Ajax</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li><a href="http://www.script-tutorials.com/category/resources/" class="gray">Other</a></li>
+        <li><a href="http://www.script-tutorials.com/about/" class="gray">About</a></li>
+        <li><a href="http://www.script-tutorials.com/creating-css3-dropdown-menu-3/" class="gray">Back</a></li>
+    </ul>
+    <div class="back"></div>
+    <div class="shadow"></div>
+</div>
+</body>
+</html>
